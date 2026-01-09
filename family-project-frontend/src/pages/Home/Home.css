@@ -1,0 +1,91 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Music Button */
+.music-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 182, 193, 0.9);
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Family Section Centered */
+.family-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* Enlarged Image Cards */
+.image-card.large {
+  text-align: center;
+}
+
+.image-card.large img {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #ffb6c1;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease;
+}
+
+.image-card.large img:hover {
+  transform: scale(1.06);
+}
+
+.image-card.large p {
+  margin-top: 16px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #0b2c5d; /* Dark Blue */
+}
+
+/* Love Symbol */
+.love-symbol {
+  font-size: 90px;
+  animation: pulse 1.6s infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .image-card.large img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .image-card.large p {
+    font-size: 18px;
+  }
+
+  .love-symbol {
+    font-size: 60px;
+  }
+
+  .family-section {
+    gap: 40px;
+  }
+}

@@ -1,0 +1,40 @@
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
